@@ -1,0 +1,9 @@
+body {
+    color: red;
+}
+
+.logo {
+    width: 300px;
+    height: 100px;
+    background: url(./images/timg.jpg) no-repeat;
+}
