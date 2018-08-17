@@ -94,7 +94,7 @@ var weixian =
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = 'hello';\n\n//# sourceURL=webpack://weixian/./src/index.js?");
+eval("console.log(1);\n\n//# sourceURL=webpack://weixian/./src/index.js?");
 
 /***/ })
 
