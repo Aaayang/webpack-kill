@@ -1,6 +1,21 @@
 const path = require('path');
-const DllReferencePlugin = require('webpack/lib/DllReferencePlugin');
 const HappyPack = require('happypack');
+
+
+// 多入口
+/* let entry = {
+    key1: 'value1',
+    key2: 'value2'
+};
+
+let htmlPlugins = [];
+
+for(let key in entry) {
+    htmlPlugins.push(new HtmlWebpackPlugin({
+        template: 'index.html',
+        filename: `${key}.html`
+    }));
+} */
 
 module.exports = {
     entry: './src/index.js',
@@ -25,9 +40,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new DllReferencePlugin({
-            manifest: path.resolve(__dirname, 'dist/react.manifest.json')
-        }),
         new HappyPack({
             id: 'babel',
             use: [{
@@ -41,8 +53,8 @@ module.exports = {
         new HappyPack({
             id: 'css',
             use: ['style-loader', 'css-loader'],
-            threads: 3, // 代表开启几个子进程去处理
-            verbose: true // 是否允许输出日志
+            // threads: 2, // 代表开启几个子进程去处理
+            // verbose: true // 是否允许输出日志
         })
     ]
 };
