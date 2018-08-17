@@ -6,8 +6,6 @@ module.exports = {
     output: {
         path: path.resolve('dist'),
         filename: 'bundle.js',
-        libraryTarget: 'var',
-        library: 'weixian'
     },
     module: {
         rules: [
